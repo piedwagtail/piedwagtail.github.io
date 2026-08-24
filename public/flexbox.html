@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The web site of piedwagtail</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    
+    <style type="text/css">
+      /* 
+        header
+        nav
+        section
+        aside - should be indirectly related to the section it's next to
+        
+        lower section1 lower section 2
+      */
+      
+      .wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+      }
+      
+      
+      .wrapper > * {
+        flex: 1 100vw;
+        padding: 0.75rem;
+      }
+      
+      .wrapper > nav {
+        padding: 0 0 0 0
+      }
+      
+      
+      .wrapper > article {
+        margin: 0;
+        border: 4px solid rgba(255,255,255,0.3);
+        border-radius:0 0 3vw 3vw;
+        background-color: rgba(255,255,255,0.3);
+        padding:1vw;
+      }
+      
+      .wrapper > aside {
+        margin: 1.5vw;
+        background-color: #066;
+        color: #fff;
+        border: 4px double #033;
+        
+      }
+      
+      .wrapper > section {
+        margin: 0 3vw 3vw 1vw;
+        color: #033;
+        background-color: #ffc;
+        border: 3px solid #066;
+        border-top-left-radius: 15px 10px;
+        border-top-right-radius: 15px 10px;
+        box-shadow: 5px 5px #996;
+        
+      }
+      
+      #readmore ~ div {
+        display: none;
+      }
+      
+      #readmore:checked ~ div {
+        display: block;
+      }
+      
+      @media all and (min-width: 600px) {
+        
+        header, nav, footer {
+          flex: 0 0 100vw;
+        }
+        
+        .wrapper > section {
+          flex: 0 0 45vw;
+        }
+        
+        hr {
+          width: 328px;
+        }
+        
+        #readmore ~ div {
+          display: block;
+        }
+        
+        #readmore, #readmore ~ label {
+          display: none;
+        }
+      }
+      
+      @media all and (min-width: 900px) {
+        .wrapper > article { /* the selector includes the wrapper class in order to give it the same specificity as the original .wrapper > * selector. without this the width won't be updated */
+          flex: 3 60vw;
+          border: 3px solid #663;
+          border-radius:7px;
+          background-color: rgba(255,255,255,0.3);
+          margin: 1vw 1vw 1vw 0.5vw;
+          padding:1vw;
+          box-shadow: 7px 7px #996;
+        }
+      
+        .wrapper > aside {
+          margin: 0;
+          flex: 1 0 20vw;
+          border: none;
+          border-left: 4px double #033;
+          border-bottom: 4px double #033;
+          border-radius: 0 0 0 7px;
+        }
+        
+        .wrapper > section {
+          margin: 0 0 2vw 0;
+        }
+        
+        hr {
+          width: 656px;
+        }
+        
+      }
+    </style>
+    
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 align="center">Pied Wagtail</h1>
+      </header>
+      <nav>
+        <input id="menu-toggle" type="checkbox" autocomplete="off" />
+      <label for="menu-toggle"> <!-- rework so that h2 is not used in label to keep headers clean !-->
+
+        <h2 class="menu-button">Menu</h2>
+
+      </label>
+      <ul class="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/birds">birds (56k warning!!!)</a></li>
+        <li><a href="https://www.ravelry.com/people/purledwagtail">knitting (ravelry link)</a></li>
+        <li class="desktop"><a class="desktop" href="">secret small screen item</a></li>
+        <li><a href="/creative">xtra</a></li>
+      </ul>
+      </nav>
+      
+      <article>
+        <h2>tha big box zone</h2>
+          <p><strong>currently designing site for mobile view</strong></p>
+          <p>i am caught between a desire to learn responsive, accessible web design and a desire to create an incoherent mess so maybe the goal is to do both. at the moment i am picking colours from the old 216 web-safe colours. when i learn to create themes i'm going to make one with the CSS named colours too. i currently need to fix my menu for accessibility (swap label from h2 to another element, figure out what to do about checkbox keyboard focusing when the box is hidden)</p>
+          <h3>shower thoughts</h3>
+            
+            <p>coding stuff on my phone is going to mess up my indentation</p>
+      
+            <p>i think about what to call the things i make from wool and fabric and threads. should it be fibre art to put it on the same level of importance as other forms of art, or would it be better to say 'arts and crafts' and treat craft as an equally important word? <br />honestly, sometimes a hat is just a hat.</p>
+      
+            <p>being on the internet means that fibre sometimes looks like an incorrect spelling</p>        
+      </article>
+      
+      <aside>
+        <h2>sidenotes</h2>
+        <input id="readmore" type="checkbox" autocomplete="off" />
+        <label for="readmore">
+          expand section
+        </label>
+        <div>
+          <ul>
+            <li>Jan 20th 2025 - so far the most enduring difficulty in knitting has been keeping track of my stitch markers, and also keeping track of the box i put all my stitch markers in to keep track of them</li>
+            <li>1</li>
+            <li>i</li>
+            <li>a</li>
+            <li>the</li>
+          </ul>
+        </div>
+      </aside>
+      
+      <div>
+        <hr />
+      </div>
+      
+      <section>
+        <h2>coding refs for later</h2>
+          <ul>
+            <li><a href="https://fossheim.io/writing/posts/accessible-theme-picker-html-css-js/" >theme picker tutorial</a></li>
+            <li><a href="https://www.quackit.com/css/grid/tutorial/css_grid_introduction.cfm">css grid tutorial</a></li>
+            <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">flexbox tutorial</a></li>
+            <li><a href="https://www.w3schools.com/html/html5_semantic_elements.asp">semantic html</a></li>
+          </ul>
+      </section>
+      
+      <section>
+        <h4>section 1</h4>
+        <a href="https://www.ravelry.com/people/purledwagtail">my ravelry account</a>
+      </section>
+      
+      <footer>
+        <p align="center"><img src="/neocities.png"></p>
+      </footer>
+    </div>
+  </body>
+</html>

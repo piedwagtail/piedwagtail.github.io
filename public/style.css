@@ -1,0 +1,315 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+html, body {
+  margin:0px;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #cc9 url("/images/style/background.png");
+  font-family: serif;
+}
+      
+.container {
+  display: grid;
+}
+      
+h2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+      
+hr {
+  height:29px;
+  width:164px;
+  border:0;
+  background-image: url("/images/style/tinybirds.gif");
+}
+
+/*
+menu
+*/
+
+nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+      
+#menu-toggle, #menu-toggle ~ ul {
+  display:none;
+}
+      
+#menu-toggle:checked ~ ul {
+  display:flex
+}
+      
+.menu-button {
+  display:block;
+  width:100%;
+  background:#ffc url("/images/style/tinybird.gif") no-repeat left bottom;
+  padding:2px 7px;
+  margin:0;
+  font: small-caps 1.25rem Times, serif;
+  box-shadow: 0 4px 4px -2px #996;
+  text-align:right;
+}
+      
+ul.menu {
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  background:#996;
+  list-style-type:none;
+  margin:0;
+  padding:2px;
+  border-radius:0 0 7px 7px;
+  box-shadow: 0 3px 4px -2px #996;
+}
+
+ul.menu li {
+  display:block;
+  background:#ffc;
+  margin:1px;
+  padding:0;
+}
+      
+      
+      /*
+      ul.menu li:first-child{
+        border-radius:4px 4px 0px 0px;
+      }
+      */
+      
+ul.menu li:last-child{
+  border-radius:0 0 4px 4px;
+}
+      
+/*
+ul.menu li:hover{
+  background:#6cc;
+  color: #066
+}
+*/
+      
+li a {
+  display:block;
+  padding:5px;
+  color: #330;
+}
+
+li a:hover {
+  background:#6cc;
+  color:#066;
+}
+
+/*
+content boxes
+*/
+
+div.content {
+  border: 3px solid #663;
+  border-radius:7px;
+  background-color: rgba(255,255,255,0.3);
+  margin:10px 12px 12px 5px;
+  padding:7px;
+  box-shadow: 7px 7px #996;
+}
+
+/* 
+flex container (gallery)
+*/
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  gap: 10px; /* can be set for grid and column layouts too */
+}
+      
+.flex-item {
+  margin: auto;        
+}
+      
+.flex-item img {
+  max-height: 300px;
+  max-width: 80vw;
+}
+      
+@media only screen and (min-width: 992px) {
+  #menu-toggle, .menu-button {
+    display:none;
+  }
+      
+  #menu-toggle ~ ul {
+    display:flex
+  }
+  
+  ul.menu {
+    flex-flow: row wrap;
+    gap: 2px;
+    width:100%;
+  }
+  ul.menu li {
+    display:block;
+    flex: 1;
+    background:#ffc;
+    margin:0;
+    padding:0;
+    font: 1.25rem Times, serif;
+  }
+      
+  ul.menu li:first-child{
+    border-radius:4px 0 0 4px;
+    background:#ffc url("/images/style/tinybird.gif") no-repeat left bottom;
+  }
+      
+  ul.menu li:last-child{
+    border-radius:0;
+  }
+        
+  li a {
+    display:block;
+    padding:0.6em;
+    margin:0;
+  }
+  
+  ul.menu li:first-child a{
+    padding-left: 2.5em;
+  }
+  
+  ul.menu li:first-child a:hover {
+    background:#6cc url("/images/style/tinybird.gif") no-repeat left bottom;
+  }
+        
+  .desktop, .desktop a{
+    display: none;
+    background-color:#fff;
+    flex: 0;
+    order: 5;
+    border-radius:0 4px 4px 0;
+  }
+}
+
+/* 
+
+  sections brought in from index
+
+  header
+  nav
+  section
+  aside - should be indirectly related to the section it's next to
+  
+  lower section1 lower section 2
+*/
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+
+.wrapper > * {
+  flex: 1 100vw;
+  padding: 0.75rem;
+}
+
+.wrapper > nav {
+  padding: 0 0 0 0
+}
+
+
+.wrapper > article {
+  margin: 0;
+  border: 4px solid rgba(255,255,255,0.3);
+  border-radius:0 0 3vw 3vw;
+  background-color: rgba(255,255,255,0.3);
+  padding:1vw;
+}
+
+.wrapper > aside {
+  margin: 1.5vw;
+  background-color: #066;
+  color: #fff;
+  border: 4px double #033;
+  
+}
+
+.wrapper > section {
+  margin: 0 3vw 3vw 1vw;
+  color: #033;
+  background-color: #ffc;
+  border: 3px solid #066;
+  border-top-left-radius: 15px 10px;
+  border-top-right-radius: 15px 10px;
+  box-shadow: 5px 5px #996;
+  
+}
+
+#readmore ~ div {
+  display: none;
+}
+
+#readmore:checked ~ div {
+  display: block;
+}
+
+@media all and (min-width: 600px) {
+  
+  header, nav, footer {
+    flex: 0 0 100vw;
+  }
+  
+  .wrapper > section {
+    flex: 0 0 45vw;
+  }
+  
+  hr {
+    width: 328px;
+  }
+  
+  #readmore ~ div {
+    display: block;
+  }
+  
+  #readmore, label[for=readmore] {
+    display: none;
+  }
+}
+
+@media all and (min-width: 900px) {
+  .wrapper > article { /* the selector includes the wrapper class in order to give it the same specificity as the original .wrapper > * selector. without this the width won't be updated */
+    flex: 3 60vw;
+    border: 3px solid #663;
+    border-radius:7px;
+    background-color: rgba(255,255,255,0.3);
+    margin: 1vw 1vw 0.5vw 0.5vw;
+    padding:1vw;
+    box-shadow: 7px 7px #996;
+  }
+
+  .wrapper > aside {
+    margin: 0;
+    flex: 1 0 20vw;
+    border: none;
+    border-left: 4px double #033;
+    border-bottom: 4px double #033;
+    border-radius: 0 0 0 7px;
+  }
+  
+  .wrapper > section {
+    margin: 0 0 2vw 0;
+  }
+  
+  hr {
+    width: 656px;
+  }
+  
+}

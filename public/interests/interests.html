@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interests</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <style type="text/css">
+      * {
+        box-sizing: border-box;
+      }
+    
+      body {
+        background: #cc9;
+      }
+      
+      .container {
+        display: grid;
+      }
+      
+      
+      .flip:hover {
+        transform: scaleX(-1);
+      }
+      
+    </style>
+  
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>rambling about interests</h1>
+      
+      <nav>
+        <input id="menu-toggle" type="checkbox" autocomplete="off" />
+      <label for="menu-toggle"> <!-- rework so that h2 is not used in label to keep headers clean !-->
+
+        <div class="menu-button">Menu</div>
+
+      </label>
+      <ul class="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/birds">birds (56k warning!!!)</a></li>
+        <li><a href="https://www.ravelry.com/people/purledwagtail">knitting (ravelry link)</a></li>
+        <li class="desktop"><a class="desktop" href="">secret small screen item</a></li>
+        <li><a href="/creative">xtra</a></li>
+      </ul>
+      </nav>
+      
+      <article>
+        <h3>interests</h3>
+        <p>it's cycling season baby!!! congrats to jasper philipsen for not winning omloop, we are so glad to see it</p>
+        <p>sixmas 2025 is here and it's all going wrong for scotland</p>
+      </article>
+      <aside>
+        <h2>Siiiiiiidebox</h2>
+        <p>most recent duck unlocked: eurasian wigeon 07/02/2025</p>
+        <input id="readmore" type="checkbox" autocomplete="off" />
+        <label for="readmore">
+          expand section
+        </label>
+        <div>
+        <h3>Previous ducks unlocked</h3>
+        <ul>
+          <li>shelduck</li>
+          <li>teal</li>
+          <li>goldeneye</li>
+          <li>tufted duck</li>
+          <li>goosander</li>
+          <li>eider</li>
+          <li>mallard</li>
+        </ul>
+        </div>
+      </aside>
+      
+      <div class="content">
+        <h3>what should i do with this flexbox</h3>
+        <div class="flex-container">
+          
+          <div class="flex-item">
+            <img src="/images/content/birds/2024gannets.jpg" />
+          </div>
+          <div class="flex-item">  
+            <img src="/images/content/birds/2024treecreeper.jpg" />
+          </div>
+          
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <p align="center"><img src="/neocities.png"></p>
+      </footer>
+    </div>
+  </body>
+</html>

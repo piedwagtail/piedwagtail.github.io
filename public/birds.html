@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>birds birds birds</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <style type="text/css">
+      * {
+        box-sizing: border-box;
+      }
+    
+      body {
+        background: #cc9;
+      }
+      
+      .container {
+        display: grid;
+      }
+      
+      
+      .flip:hover {
+        transform: scaleX(-1);
+      }
+      
+    </style>
+  
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Birds</h1>
+      
+      <nav>
+        <input id="menu-toggle" type="checkbox" autocomplete="off" />
+      <label for="menu-toggle"> <!-- rework so that h2 is not used in label to keep headers clean !-->
+
+        <div class="menu-button">Menu</div>
+
+      </label>
+      <ul class="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/birds">birds (56k warning!!!)</a></li>
+        <li><a href="https://www.ravelry.com/people/purledwagtail">knitting (ravelry link)</a></li>
+        <li class="desktop"><a class="desktop" href="">secret small screen item</a></li>
+        <li><a href="/creative">xtra</a></li>
+      </ul>
+      </nav>
+      
+      <article>
+        <img src="/birdanim.gif"> <img class="flip" src="/birdanim.gif"> <img src="/birdanim.gif"> 
+        <h3>here are some of my favourite birds</h3>
+        <ul>
+          <li>eurasian magpie</li>
+          <li>pied wagtail (sub-sp of white wagtail)</li>
+          <li>eurasian treecreeper (i expect i would also like other treecreepers if i met them)</li>
+          <li>rainbow lorikeet</li>
+          <li>barn swallow</li>
+        </ul>
+      </article>
+      <aside>
+        <h2>New duck just dropped!!!</h2>
+        <p>most recent duck unlocked: eurasian wigeon 07/02/2025</p>
+        <input id="readmore" type="checkbox" autocomplete="off" />
+        <label for="readmore">
+          expand section
+        </label>
+        <div>
+        <h3>Previous ducks unlocked</h3>
+        <ul>
+          <li>shelduck</li>
+          <li>teal</li>
+          <li>goldeneye</li>
+          <li>tufted duck</li>
+          <li>goosander</li>
+          <li>eider</li>
+          <li>mallard</li>
+        </ul>
+        </div>
+      </aside>
+      
+      <div class="content">
+        <h3>i draw birds (and here i am testing a flexbox container)</h3>
+        <div class="flex-container">
+          <div class="flex-item">
+            <img src="/images/content/birds/sketch1.jpg" />
+          </div>
+          <div class="flex-item">
+            <img src="/images/content/birds/2025wagtailwpigeon.gif" />
+          </div>
+          <div class="flex-item">  
+            <img src="/images/content/birds/sketch2.jpg" />
+          </div>
+          <div class="flex-item">
+            <img src="/images/content/birds/2024gannets.jpg" />
+          </div>
+          <div class="flex-item">  
+            <img src="/images/content/birds/2024treecreeper.jpg" />
+          </div>
+          <div class="flex-item">  
+            <img src="/images/content/birds/2024swan.jpg" />
+          </div>
+          <div class="flex-item">  
+            <img src="/images/content/birds/2024curlew.png" />
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <p align="center"><img src="/neocities.png"></p>
+      </footer>
+    </div>
+  </body>
+</html>
