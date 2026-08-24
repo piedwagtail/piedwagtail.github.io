@@ -12,7 +12,7 @@ html, body {
 }
 
 body {
-  background: #cc9 url("/images/style/background.png");
+  background: #cc9 url("../assets/images/style/background.png");
   font-family: serif;
 }
       
