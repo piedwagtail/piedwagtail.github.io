@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+	<link href="css/themes.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+theme picker
+
+<nav>
+  <input id="menu-toggle" type="checkbox" autocomplete="off" />
+	<label for="menu-toggle"> <!-- rework so that h2 is not used in label to keep headers clean !-->
+
+  		<div class="menu-button">Menu</div>
+
+	</label>
+	<ul class="menu">
+	  <li><a href="/">Home</a></li>
+	  <li><a href="/birds">birds (56k warning!!!)</a></li>
+	  <li><a href="https://www.ravelry.com/people/purledwagtail">knitting (ravelry link)</a></li>
+	  <li class="desktop"><a class="desktop" href="">secret small screen item</a></li>
+	  <li><a href="/creative">xtra</a></li>
+	</ul>
+</nav>
+
+<div class="theme-switcher">
+	<button data-theme="216" aria-pressed="false">Theme: 216</button>
+	<button data-theme="612" aria-pressed="true">Theme: 612</button>
+</div>
+<script src="js/themes.js"></script>
+
+</body>
+</html>
