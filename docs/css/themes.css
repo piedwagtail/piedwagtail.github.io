@@ -1,22 +1,22 @@
 :root,
 [data-selected-theme="612"] {
-  --color-background: #99c; /* body background */
-  --menu-background:#ccf; /* menu item background */
-  --menu-shadow:#669; /* menu border and drop shadow*/
+  --color-background: #9999cc; /* body background */
+  --menu-background:#ccccff; /* menu item background */
+  --menu-shadow:#666699; /* menu border and drop shadow*/
 
-  --menu-text:#003;
-  --menu-hover:#c39; /* menu item background on hover */
-  --menu-text-hover:#303;
+  --menu-text:#000033;
+  --menu-hover:#cc3399; /* menu item background on hover */
+  --menu-text-hover:#330033;
 }
 
 [data-selected-theme="216"] {
-  --color-background: #9cc;
-  --menu-background:#ffc;
-  --menu-shadow:#366;  
+  --color-background: #99cccc;
+  --menu-background:#ffffcc;
+  --menu-shadow:#336666;  
 
-  --menu-text:#033;
-  --menu-hover:#6cc;
-  --menu-text-hover:#066;
+  --menu-text:#003333;
+  --menu-hover:#66cccc;
+  --menu-text-hover:#006666;
 }
 
 body {
@@ -59,3 +59,14 @@ li a:hover {
 ul.menu li:first-child a:hover {
     background: var(--menu-hover) url("../assets/images/style/tinybird.gif") no-repeat left bottom;
   }
+
+
+
+div.content {
+  border: 3px solid var(--menu-text-hover);
+  border-radius:7px;
+  background-color: rgba(255,255,255,0.3);
+  margin:10px 12px 12px 5px;
+  padding:7px;
+  box-shadow: 7px 7px var(--menu-shadow);
+}

@@ -12,7 +12,6 @@ html, body {
 }
 
 body {
-  background: #cc9 url("../assets/images/style/background.png");
   font-family: serif;
 }
       
@@ -53,11 +52,9 @@ nav {
 .menu-button {
   display:block;
   width:100%;
-  background:#ffc url("../assets/images/style/tinybird.gif") no-repeat left bottom;
   padding:2px 7px;
   margin:0;
   font: small-caps 1.25rem Times, serif;
-  box-shadow: 0 4px 4px -2px #996;
   text-align:right;
 }
       
