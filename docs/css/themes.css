@@ -22,7 +22,7 @@
 body {
   background: var(--color-background);
   background-image: url("../assets/images/style/background.png");
-  background-blend-mode: color;
+  background-blend-mode: luminosity;
 }
 
 .theme-switcher {
