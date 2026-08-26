@@ -3,6 +3,7 @@
   --color-background: #9999cc; /* body background */
   --menu-background:#ccccff; /* menu item background */
   --menu-shadow:#666699; /* menu border and drop shadow*/
+  --menu-alpha: rgb(102, 102, 153, 0.5)
 
   --menu-text:#000033;
   --menu-hover:#cc3399; /* menu item background on hover */
@@ -14,7 +15,8 @@
 [data-selected-theme="216"] {
   --color-background: #99cccc;
   --menu-background:#ffffcc;
-  --menu-shadow:#336666;  
+  --menu-shadow:#336666; 
+  --menu-alpha: rgb(51, 102, 102, 0.5)
 
   --menu-text:#003333;
   --menu-hover:#66cccc;
