@@ -7,6 +7,8 @@
   --menu-text:#000033;
   --menu-hover:#cc3399; /* menu item background on hover */
   --menu-text-hover:#330033;
+
+  --dark-accent:#330033;
 }
 
 [data-selected-theme="216"] {
@@ -17,6 +19,8 @@
   --menu-text:#003333;
   --menu-hover:#66cccc;
   --menu-text-hover:#006666;
+
+  --dark-accent:#006666;
 }
 
 body {
@@ -60,13 +64,24 @@ ul.menu li:first-child a:hover {
     background: var(--menu-hover) url("../assets/images/style/tinybird.gif") no-repeat left bottom;
   }
 
-
-
-div.content {
+/* div.content {
   border: 3px solid var(--menu-text-hover);
   border-radius:7px;
   background-color: rgba(255,255,255,0.3);
   margin:10px 12px 12px 5px;
   padding:7px;
   box-shadow: 7px 7px var(--menu-shadow);
+} */
+
+.wrapper > aside {
+  background-color: var(--dark-accent);
+  color: #fff;
+  border: 4px double var(--menu-text);  
+}
+
+.wrapper > section {
+  color: #033;
+  background-color: var(--menu-background);
+  border: 3px solid var(--menu-text-hover);
+  box-shadow: 5px 5px var(--menu-shadow);
 }
