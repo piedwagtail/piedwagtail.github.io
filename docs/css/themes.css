@@ -21,6 +21,8 @@
 
 body {
   background: var(--color-background);
+  background-image: url("../assets/images/style/background.png");
+  background-blend-mode: color;
 }
 
 .theme-switcher {
