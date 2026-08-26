@@ -85,3 +85,10 @@ ul.menu li:first-child a:hover {
   border: 3px solid var(--menu-text-hover);
   box-shadow: 5px 5px var(--menu-shadow);
 }
+
+@media all and (min-width: 900px) {
+  .wrapper > article { /* the selector includes the wrapper class in order to give it the same specificity as the original .wrapper > * selector. without this the width won't be updated */
+    border: 3px solid var(--menu-shadow);
+    border-radius:7px;
+    box-shadow: 7px 7px var(--menu-hover);
+  }
